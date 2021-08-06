@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		247C8BD626BD83340014E215 /* Kadai5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247C8BD526BD83340014E215 /* Kadai5Tests.swift */; };
+		247C8BE126BD87FC0014E215 /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247C8BE026BD87FC0014E215 /* Division.swift */; };
 		24A77C7026BCE69E009BE0F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A77C6F26BCE69E009BE0F8 /* AppDelegate.swift */; };
 		24A77C7226BCE69E009BE0F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A77C7126BCE69E009BE0F8 /* SceneDelegate.swift */; };
 		24A77C7426BCE69E009BE0F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A77C7326BCE69E009BE0F8 /* ViewController.swift */; };
@@ -15,7 +17,21 @@
 		24A77C7C26BCE6A1009BE0F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A77C7A26BCE6A1009BE0F8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		247C8BD826BD83340014E215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24A77C6426BCE69E009BE0F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24A77C6B26BCE69E009BE0F8;
+			remoteInfo = Kadai5;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		247C8BD326BD83340014E215 /* Kadai5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Kadai5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		247C8BD526BD83340014E215 /* Kadai5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kadai5Tests.swift; sourceTree = "<group>"; };
+		247C8BD726BD83340014E215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		247C8BE026BD87FC0014E215 /* Division.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Division.swift; sourceTree = "<group>"; };
 		24A77C6C26BCE69E009BE0F8 /* Kadai5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kadai5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A77C6F26BCE69E009BE0F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24A77C7126BCE69E009BE0F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +43,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		247C8BD026BD83340014E215 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24A77C6926BCE69E009BE0F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +60,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		247C8BD426BD83340014E215 /* Kadai5Tests */ = {
+			isa = PBXGroup;
+			children = (
+				247C8BD526BD83340014E215 /* Kadai5Tests.swift */,
+				247C8BD726BD83340014E215 /* Info.plist */,
+			);
+			path = Kadai5Tests;
+			sourceTree = "<group>";
+		};
+		247C8BDD26BD83840014E215 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				247C8BE026BD87FC0014E215 /* Division.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		247C8BDE26BD83900014E215 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				24A77C7326BCE69E009BE0F8 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		247C8BDF26BD839D0014E215 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24A77C7526BCE69E009BE0F8 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		24A77C6326BCE69E009BE0F8 = {
 			isa = PBXGroup;
 			children = (
 				24A77C6E26BCE69E009BE0F8 /* Kadai5 */,
+				247C8BD426BD83340014E215 /* Kadai5Tests */,
 				24A77C6D26BCE69E009BE0F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				24A77C6C26BCE69E009BE0F8 /* Kadai5.app */,
+				247C8BD326BD83340014E215 /* Kadai5Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,10 +114,11 @@
 		24A77C6E26BCE69E009BE0F8 /* Kadai5 */ = {
 			isa = PBXGroup;
 			children = (
+				247C8BDD26BD83840014E215 /* Models */,
+				247C8BDF26BD839D0014E215 /* Views */,
+				247C8BDE26BD83900014E215 /* Controllers */,
 				24A77C6F26BCE69E009BE0F8 /* AppDelegate.swift */,
 				24A77C7126BCE69E009BE0F8 /* SceneDelegate.swift */,
-				24A77C7326BCE69E009BE0F8 /* ViewController.swift */,
-				24A77C7526BCE69E009BE0F8 /* Main.storyboard */,
 				24A77C7826BCE6A1009BE0F8 /* Assets.xcassets */,
 				24A77C7A26BCE6A1009BE0F8 /* LaunchScreen.storyboard */,
 				24A77C7D26BCE6A1009BE0F8 /* Info.plist */,
@@ -70,6 +129,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		247C8BD226BD83340014E215 /* Kadai5Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 247C8BDA26BD83340014E215 /* Build configuration list for PBXNativeTarget "Kadai5Tests" */;
+			buildPhases = (
+				247C8BCF26BD83340014E215 /* Sources */,
+				247C8BD026BD83340014E215 /* Frameworks */,
+				247C8BD126BD83340014E215 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				247C8BD926BD83340014E215 /* PBXTargetDependency */,
+			);
+			name = Kadai5Tests;
+			productName = Kadai5Tests;
+			productReference = 247C8BD326BD83340014E215 /* Kadai5Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		24A77C6B26BCE69E009BE0F8 /* Kadai5 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24A77C8026BCE6A1009BE0F8 /* Build configuration list for PBXNativeTarget "Kadai5" */;
@@ -77,6 +154,7 @@
 				24A77C6826BCE69E009BE0F8 /* Sources */,
 				24A77C6926BCE69E009BE0F8 /* Frameworks */,
 				24A77C6A26BCE69E009BE0F8 /* Resources */,
+				247C8BCE26BD7B750014E215 /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -96,6 +174,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					247C8BD226BD83340014E215 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 24A77C6B26BCE69E009BE0F8;
+					};
 					24A77C6B26BCE69E009BE0F8 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -115,11 +197,19 @@
 			projectRoot = "";
 			targets = (
 				24A77C6B26BCE69E009BE0F8 /* Kadai5 */,
+				247C8BD226BD83340014E215 /* Kadai5Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		247C8BD126BD83340014E215 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24A77C6A26BCE69E009BE0F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,7 +222,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		247C8BCE26BD7B750014E215 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		247C8BCF26BD83340014E215 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				247C8BD626BD83340014E215 /* Kadai5Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24A77C6826BCE69E009BE0F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,10 +259,19 @@
 				24A77C7426BCE69E009BE0F8 /* ViewController.swift in Sources */,
 				24A77C7026BCE69E009BE0F8 /* AppDelegate.swift in Sources */,
 				24A77C7226BCE69E009BE0F8 /* SceneDelegate.swift in Sources */,
+				247C8BE126BD87FC0014E215 /* Division.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		247C8BD926BD83340014E215 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24A77C6B26BCE69E009BE0F8 /* Kadai5 */;
+			targetProxy = 247C8BD826BD83340014E215 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		24A77C7526BCE69E009BE0F8 /* Main.storyboard */ = {
@@ -165,6 +293,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		247C8BDB26BD83340014E215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6K8M6RQ2W;
+				INFOPLIST_FILE = Kadai5Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.r.t.astronomy.Kadai5Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kadai5.app/Kadai5";
+			};
+			name = Debug;
+		};
+		247C8BDC26BD83340014E215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6K8M6RQ2W;
+				INFOPLIST_FILE = Kadai5Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.r.t.astronomy.Kadai5Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kadai5.app/Kadai5";
+			};
+			name = Release;
+		};
 		24A77C7E26BCE6A1009BE0F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -322,6 +490,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		247C8BDA26BD83340014E215 /* Build configuration list for PBXNativeTarget "Kadai5Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				247C8BDB26BD83340014E215 /* Debug */,
+				247C8BDC26BD83340014E215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		24A77C6726BCE69E009BE0F8 /* Build configuration list for PBXProject "Kadai5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
