@@ -22,16 +22,7 @@ class ViewController: UIViewController {
             let culculationResult = try model.divide(textFields: textFields)
             label.text = String(culculationResult)
         } catch let error as DivideError {
-            switch error {
-            case .devidedByZero:
-                model.showAlert(viewController: self, message: error.alertTirle)
-            case .nonDividend:
-                model.showAlert(viewController: self, message: error.alertTirle)
-            case .nonDiviser:
-                model.showAlert(viewController: self, message: error.alertTirle)
-            case .other:
-                model.showAlert(viewController: self, message: error.alertTirle)
-            }
+            model.showAlert(viewController: self, message: error.alertTirle)
         } catch {
             model.showAlert(viewController: self, message: DivideError.other.alertTirle)
         }
