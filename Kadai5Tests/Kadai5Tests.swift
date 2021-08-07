@@ -24,7 +24,7 @@ class Kadai5Tests: XCTestCase {
         // テストしたいところが以下のように複数ある場合はコメントアウトして
         // 1つずつ確かめるという方法で良いのでしょうか？
         do {
-             let result = try Division().divide(textFields: [textField1, textField2])
+             let result = try Division().calculateDivision(textFields: [textField1, textField2])
             // XCTAssertEqual(result, 2)
         } catch let error as DivideError {
             switch error {

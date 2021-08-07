@@ -17,14 +17,14 @@ enum DivideError: Error {
         switch self {
         case .devidedByZero: return "割る数には０を入力しないでください"
         case .nonDiviser: return "割る数を入力してください"
-        case .nonDividend: return "割られる数を入力してくださ"
-        case .other: return "予期せぬエラーが発生しました。"
+        case .nonDividend: return "割られる数を入力してください"
+        case .other: return "予期せぬエラーが発生しました"
         }
     }
 }
 
 final class Division {
-    func divide(textFields: [UITextField]) throws -> Double {
+    func calculateDivision(textFields: [UITextField]) throws -> Double {
         let nums = textFields.map { Double($0.text ?? "") }
 
         if nums[0] == nil {
@@ -41,7 +41,7 @@ final class Division {
         return dividend / divisor
     }
 
-    func showAlert(viewController: UIViewController, message: String) {
+    func showDivisionAlert(viewController: UIViewController, message: String) {
         let alert = UIAlertController(title: "課題５", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         viewController.present(alert, animated: true, completion: nil)

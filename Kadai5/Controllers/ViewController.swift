@@ -19,12 +19,12 @@ class ViewController: UIViewController {
     @IBAction private func didTapButton(_ sender: UIButton) {
         // do-catchの部分もModelにすべきでしょうか？
         do {
-            let culculationResult = try model.divide(textFields: textFields)
+            let culculationResult = try model.calculateDivision(textFields: textFields)
             label.text = String(culculationResult)
         } catch let error as DivideError {
-            model.showAlert(viewController: self, message: error.alertTirle)
+            model.showDivisionAlert(viewController: self, message: error.alertTirle)
         } catch {
-            model.showAlert(viewController: self, message: DivideError.other.alertTirle)
+            model.showDivisionAlert(viewController: self, message: DivideError.other.alertTirle)
         }
     }
 }
