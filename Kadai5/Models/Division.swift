@@ -12,7 +12,7 @@ enum DivideError: Error {
     case nonDiviser
     case nonDividend
     case other
-    
+
     var alertTirle: String {
         switch self {
         case .devidedByZero: return "割る数には０を入力しないでください"

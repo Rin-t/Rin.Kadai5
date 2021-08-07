@@ -20,7 +20,7 @@ class Kadai5Tests: XCTestCase {
             textfield.text = "0"
             return textfield
         }()
-        
+
         // テストしたいところが以下のように複数ある場合はコメントアウトして
         // 1つずつ確かめるという方法で良いのでしょうか？
         do {
