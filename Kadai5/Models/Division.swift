@@ -12,6 +12,15 @@ enum DivideError: Error {
     case nonDiviser
     case nonDividend
     case other
+    
+    var alertTirle: String {
+        switch self {
+        case .devidedByZero: return "割る数には０を入力しないでください"
+        case .nonDiviser: return "割る数を入力してください"
+        case .nonDividend: return "割られる数を入力してくださ"
+        case .other: return "予期せぬエラーが発生しました。"
+        }
+    }
 }
 
 final class Division {

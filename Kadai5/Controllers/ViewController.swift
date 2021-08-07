@@ -24,16 +24,16 @@ class ViewController: UIViewController {
         } catch let error as DivideError {
             switch error {
             case .devidedByZero:
-                model.showAlert(viewController: self, message: "割る数には０を入力しないでください")
+                model.showAlert(viewController: self, message: error.alertTirle)
             case .nonDividend:
-                model.showAlert(viewController: self, message: "割られる数を入力してください")
+                model.showAlert(viewController: self, message: error.alertTirle)
             case .nonDiviser:
-                model.showAlert(viewController: self, message: "割る数を入力してください")
+                model.showAlert(viewController: self, message: error.alertTirle)
             case .other:
-                model.showAlert(viewController: self, message: "予期せぬエラーが発生しました")
+                model.showAlert(viewController: self, message: error.alertTirle)
             }
         } catch {
-            model.showAlert(viewController: self, message: "予期せぬエラーが発生しました。")
+            model.showAlert(viewController: self, message: DivideError.other.alertTirle)
         }
     }
 }
