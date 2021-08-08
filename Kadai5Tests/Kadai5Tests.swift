@@ -9,37 +9,45 @@ import XCTest
 @testable import Kadai5
 
 class Kadai5Tests: XCTestCase {
-    func testDivid() {
-        let textField1: UITextField = {
-            let textfield = UITextField()
-            textfield.text = "6"
-            return textfield
-        }()
-        let textField2: UITextField = {
-            let textfield = UITextField()
-            textfield.text = "0"
-            return textfield
-        }()
-
-        // テストしたいところが以下のように複数ある場合はコメントアウトして
-        // 1つずつ確かめるという方法で良いのでしょうか？
+    func testDividedZero() {
         do {
-             let result = try Division().calculateDivision(textFields: [textField1, textField2])
-            // XCTAssertEqual(result, 2)
+            _ = try Division().calculateDivision(dividendText: "4", divisorText: "0")
+            XCTFail("例外がスローされなかった")
         } catch let error as DivideError {
-            switch error {
-            case .devidedByZero:
-                XCTAssertEqual(error, DivideError.devidedByZero)
-            case .nonDividend:
-                // XCTAssertEqual(error, DivideError.nonDividend)
+            XCTAssertEqual(error, DivideError.devidedByZero)
+        } catch {
             return
-            case .nonDiviser:
-                // XCTAssertEqual(error, DivideError.nonDiviser)
+        }
+    }
+
+    func testNonDividend() {
+        do {
+            _ = try Division().calculateDivision(dividendText: "", divisorText: "0")
+            XCTFail("例外がスローされなかった")
+        } catch let error as DivideError {
+            XCTAssertEqual(error, DivideError.nonDividend)
+        } catch {
             return
-            case .other:
-                // XCTAssertEqual(error, DivideError.other)
+        }
+    }
+
+    func testNonDivisor() {
+        do {
+            _ = try Division().calculateDivision(dividendText: "2", divisorText: "")
+            XCTFail("例外がスローされなかった")
+        } catch let error as DivideError {
+            XCTAssertEqual(error, DivideError.nonDivisor)
+        } catch {
             return
-            }
+        }
+    }
+
+    func testDivid() {
+        do {
+            let resultDivision = try Division().calculateDivision(dividendText: "2", divisorText: "1")
+            XCTAssertEqual(resultDivision, 2)
+        } catch _ as DivideError {
+            XCTFail("エラーが検知されました")
         } catch {
             return
         }
