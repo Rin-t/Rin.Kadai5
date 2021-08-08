@@ -9,39 +9,23 @@ import XCTest
 @testable import Kadai5
 
 class Kadai5Tests: XCTestCase {
-    func testDivid() {
-        let textField1: UITextField = {
-            let textfield = UITextField()
-            textfield.text = "6"
-            return textfield
-        }()
-        let textField2: UITextField = {
-            let textfield = UITextField()
-            textfield.text = "0"
-            return textfield
-        }()
-
-        // テストしたいところが以下のように複数ある場合はコメントアウトして
-        // 1つずつ確かめるという方法で良いのでしょうか？
+    func testDevidedByZero() {
         do {
-             let result = try Division().calculateDivision(textFields: [textField1, textField2])
-            // XCTAssertEqual(result, 2)
+            _ = try Division().calculateDivision(dividendText: "6", divisorText: "0")
+            XCTFail("例外がスローされなかった")
         } catch let error as DivideError {
-            switch error {
-            case .devidedByZero:
-                XCTAssertEqual(error, DivideError.devidedByZero)
-            case .nonDividend:
-                // XCTAssertEqual(error, DivideError.nonDividend)
-            return
-            case .nonDiviser:
-                // XCTAssertEqual(error, DivideError.nonDiviser)
-            return
-            case .other:
-                // XCTAssertEqual(error, DivideError.other)
-            return
-            }
+            XCTAssertEqual(error, DivideError.devidedByZero)
         } catch {
-            return
+            XCTFail("期待するエラーが発生しなかった")
+        }
+    }
+
+    func testSuccess() {
+        do {
+            let result = try Division().calculateDivision(dividendText: "6", divisorText: "2")
+            XCTAssertEqual(result, 3)
+        } catch {
+            XCTFail("エラーが発生してしまった")
         }
     }
 }
